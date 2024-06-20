@@ -1,0 +1,22 @@
+<div>
+  <h2>Registrar Factura</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label>Tipo de Gasto:</label>
+      <select [(ngModel)]="factura.tipoGasto" name="tipoGasto" required>
+        <option value="salud">Salud</option>
+        <option value="alimentacion">Alimentación</option>
+        <option value="vestimenta">Vestimenta</option>
+      </select>
+    </div>
+    <div>
+      <label>RUC:</label>
+      <input type="text" [(ngModel)]="factura.ruc" name="ruc" required />
+    </div>
+    <div>
+      <label>Valor de Factura:</label>
+      <input type="number" [(ngModel)]="factura.valor" name="valor" required />
+    </div>
+    <button type="submit">Agregar</button>
+  </form>
+</div>

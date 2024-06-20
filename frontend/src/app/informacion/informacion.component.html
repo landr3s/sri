@@ -1,0 +1,20 @@
+<div *ngFor="let deducible of deducibles" class="deducible-card">
+  <h3>{{ deducible }}</h3>
+  <button (click)="mostrarInformacion(deducible)" class="btn btn-info">
+    Información
+  </button>
+  <button (click)="borrarDeducible(deducible)" class="btn btn-warning">
+    Borrar
+  </button>
+  <div *ngIf="deducibleSeleccionado === deducible" class="card mt-3">
+    <div class="card-body">
+      <h4>{{ obtenerTitulo(deducible) }}</h4>
+      <img
+        [src]="'assets/images/' + deducible.toLowerCase() + '.jpg'"
+        alt="{{ deducible }}"
+        class="img-fluid mb-3"
+      />
+      <p>{{ obtenerInformacion(deducible) }}</p>
+    </div>
+  </div>
+</div>

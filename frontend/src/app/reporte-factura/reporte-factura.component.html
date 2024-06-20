@@ -1,0 +1,27 @@
+<div>
+  <h2>Reporte de Facturas</h2>
+  <table>
+    <tr>
+      <th>Tipo de Gasto</th>
+      <th>RUC</th>
+      <th>Valor</th>
+      <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let factura of facturas">
+      <td>{{ factura.tipoGasto }}</td>
+      <td>{{ factura.ruc }}</td>
+      <td>{{ factura.valor }}</td>
+      <td>
+        <button (click)="editarFactura(factura)" class="btn btn-primary btn-sm">
+          Editar
+        </button>
+        <button
+          (click)="eliminarFactura(factura.id)"
+          class="btn btn-danger btn-sm"
+        >
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

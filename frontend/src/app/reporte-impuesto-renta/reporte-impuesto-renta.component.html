@@ -1,0 +1,31 @@
+<div class="container">
+  <h2 class="text-center">Reporte de Impuesto a la Renta</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Cédula</th>
+        <th>Gastos</th>
+        <th>Ingreso</th>
+        <th>Base Imponible</th>
+        <th>Fracción Básica</th>
+        <th>Excedente</th>
+        <th>Valor Excedente</th>
+        <th>Impuesto FB</th>
+        <th>Impuesto a la Renta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let impuesto of impuestos">
+        <td>{{ impuesto.cedula }}</td>
+        <td>{{ impuesto.gastos }}</td>
+        <td>{{ impuesto.ingreso }}</td>
+        <td>{{ impuesto.baseImponible }}</td>
+        <td>{{ impuesto.fraccionBasica }}</td>
+        <td>{{ impuesto.excedente }}</td>
+        <td>{{ impuesto.valorExcedente }}</td>
+        <td>{{ impuesto.impuestoFB }}</td>
+        <td>{{ impuesto.impuestoRenta }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
